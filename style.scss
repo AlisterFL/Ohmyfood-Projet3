@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+$color-background: #F7F7F7;
+$color-primary: #9356DC;
+$color-gradiant: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+$color-gradiant-reverse: linear-gradient(0deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+$color-dark-background: #353535;
+
+@mixin miseEnPage{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 5%;
+    row-gap: 20px;
+    width: 100%;
+}
+
+@mixin normalShadow{
+    box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.20);
+}
+
+
+
+body{
+    max-width: 1400px;
+    font-family: 'Roboto';
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    counter-reset: fonctionnement;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    line-height: 0;
+    background-color: white;
+    padding: 16px;
+}
+
+.location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(226, 226, 226);
+    box-shadow: inset 0px 4px 5px 0px #d0d0d0;
+
+    .position-icon{
+        font-size: 18px;
+    }
+
+    span{
+        display: flex;
+        font-size: 18px;
+        margin: 17px 21px;
+    }
+
+}
+
+.presentation{
+    @include miseEnPage;
+    align-items: center;
+    background-color: $color-background;
+    h1{
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+    }
+    p{
+        font-size: 16px;
+        font-weight: 300;
+        text-align: center;
+    }
+    a{
+        font-size: 17px;
+        color: white;
+        background: $color-gradiant;
+        padding: 15px 25px;
+        border-radius: 25px;
+        
+        @include normalShadow;
+    }
+}
+
+.fonctionnement{
+    @include miseEnPage;
+
+    .etape{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+
+        a{
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            
+            background-color: rgb(244, 244, 244);
+            width: 100%;
+            padding: 22px 25px 22px 30px;
+            border-radius: 19px;
+            text-align: center;
+            box-shadow: 2px 5px 16px -4px rgb(0 0 0 / 42%);
+
+        i{
+            color: rgb(106, 106, 106);
+            width: 18px;
+            text-align: center;
+        }
+
+        span{
+            color: black;
+            flex: 1;
+        }
+        &::before{
+            counter-increment: fonctionnement;
+            content: counter(fonctionnement);
+            position: absolute;
+            left: -8px;
+            background-color: #9356DC;
+            font-size: 11px;
+            color: white;
+            border-radius: 25px;
+            padding: 4px 7px;
+        }
+        }
+    }
+}
+
+
+.liste-restaurants{
+    @include miseEnPage;
+    padding: 50px 5%;
+
+    background-color: $color-background;
+
+    .restaurant{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 15px;
+
+        @include normalShadow;
+
+        img{
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+            height: 175px;
+            width: 100%;
+        }
+        .description{
+            display: flex;
+            color: black;
+            height: 65px;
+            padding: 7px 15px;
+            justify-content: space-between;
+            align-items: center;
+
+            .enseigne{
+                display: flex;
+                row-gap: 3px;
+                flex-direction: column;
+                
+            }
+
+            h2{
+                font-size: 17px;
+            }
+        
+        }
+    }
+
+}
+
+
+
+.favorite-btn{
+
+    width: 30px;
+    height: 30px;
+
+
+    input[type="checkbox"]{
+        display: none;
+        
+
+        &:checked + label .heart-icon.fas {
+            opacity: 100;
+            animation: animation-like-in 0.3s linear forwards ;
+            display: inline-block;
+            transform: scale(0.2);
+            background-image: $color-gradiant-reverse;
+            background-clip: text;
+            color: transparent;
+        
+        }
+
+        
+        &:checked + label .heart-icon.far {
+            opacity: 0 ;
+            transform: scale(0.2);
+        
+        }
+
+        &:not(:checked) + label .heart-icon.fas {
+            animation: animation-like-out 0.3s linear forwards ;
+            background-image: $color-gradiant-reverse;
+            background-clip: text;
+            color: transparent;
+        
+        }
+
+
+        &:not(:checked) + label .heart-icon.far {
+            animation: animation-like-in 0.3s linear forwards ;
+            color: black;
+
+        }
+    }
+
+    label{
+        cursor: pointer;
+        position: relative;
+
+        .heart-icon {
+            font-size: 30px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        i{ 
+            position: absolute;
+        }
+    }
+
+
+}
+
+
+
+footer{
+    @include miseEnPage;
+    padding: 25px 5%;
+    row-gap: 10px;
+    background-color: $color-dark-background;
+    
+    color: white;
+
+    svg {        
+        width: 90px;
+
+        path{
+            fill: #FFF;
+            
+        }
+    }
+    
+    i{
+        width: 20px;
+    }
+
+}
