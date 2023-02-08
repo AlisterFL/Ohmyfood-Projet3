@@ -69,6 +69,11 @@ header {
   padding: 15px 25px;
   border-radius: 25px;
   box-shadow: 0px 0px 16px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+.presentation a:hover {
+  box-shadow: 0px 0px 16px 2px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
 }
 
 .fonctionnement {
@@ -131,6 +136,12 @@ header {
   background-color: white;
   border-radius: 15px;
   box-shadow: 0px 0px 16px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+.liste-restaurants .restaurant:hover {
+  box-shadow: 0px 0px 16px 2px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+  background-color: rgba(255, 255, 255, 0.975);
 }
 .liste-restaurants .restaurant img {
   -o-object-fit: cover;
@@ -155,52 +166,18 @@ header {
 .liste-restaurants .restaurant .description h2 {
   font-size: 17px;
 }
-
-.favorite-btn {
-  width: 30px;
-  height: 30px;
-}
-.favorite-btn input[type=checkbox] {
-  display: none;
-}
-.favorite-btn input[type=checkbox]:checked + label .heart-icon.fas {
-  opacity: 100;
-  -webkit-animation: animation-like-in 0.3s linear forwards;
-          animation: animation-like-in 0.3s linear forwards;
-  display: inline-block;
-  transform: scale(0.2);
-  background-image: linear-gradient(0deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
-  -webkit-background-clip: text;
-          background-clip: text;
-  color: transparent;
-}
-.favorite-btn input[type=checkbox]:checked + label .heart-icon.far {
-  opacity: 0;
-  transform: scale(0.2);
-}
-.favorite-btn input[type=checkbox]:not(:checked) + label .heart-icon.fas {
-  -webkit-animation: animation-like-out 0.3s linear forwards;
-          animation: animation-like-out 0.3s linear forwards;
-  background-image: linear-gradient(0deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
-  -webkit-background-clip: text;
-          background-clip: text;
-  color: transparent;
-}
-.favorite-btn input[type=checkbox]:not(:checked) + label .heart-icon.far {
-  -webkit-animation: animation-like-in 0.3s linear forwards;
-          animation: animation-like-in 0.3s linear forwards;
-  color: black;
-}
-.favorite-btn label {
-  cursor: pointer;
+.liste-restaurants .nouveau-restaurant .container {
   position: relative;
 }
-.favorite-btn label .heart-icon {
-  font-size: 30px;
-  transition: all 0.3s ease-in-out;
-}
-.favorite-btn label i {
+.liste-restaurants .nouveau-restaurant .container::before {
+  content: "Nouveau";
+  color: rgb(29, 128, 74);
+  background-color: rgb(145, 227, 182);
   position: absolute;
+  padding: 5px 10px;
+  right: 15px;
+  top: 15px;
+  border-radius: 2px;
 }
 
 footer {

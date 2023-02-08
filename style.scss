@@ -24,7 +24,10 @@ $color-dark-background: #353535;
 @mixin normalShadow{
     box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.20);
 }
-
+@mixin hoverScaleShadow{
+    box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.40);
+    transform: scale(1.01);
+}
 
 
 body{
@@ -89,6 +92,10 @@ header{
         border-radius: 25px;
         
         @include normalShadow;
+        transition: all 0.3s;
+        &:hover{
+            @include hoverScaleShadow;
+        }
     }
 }
 
@@ -153,6 +160,13 @@ header{
         border-radius: 15px;
 
         @include normalShadow;
+        transition: all 0.3s;
+
+        &:hover{
+            @include hoverScaleShadow;
+            background-color: rgba(255, 255, 255, 0.975);
+
+        }
 
         img{
             object-fit: cover;
@@ -182,70 +196,26 @@ header{
         }
     }
 
+    .nouveau-restaurant{
+
+        .container{
+            position: relative;
+    
+            &::before{
+                content: "Nouveau";
+                color: rgb(29 128 74);
+                background-color: rgb(145 227 182);
+                position: absolute;
+                padding: 5px 10px;
+                right: 15px;
+                top: 15px;
+                border-radius: 2px;
+            }
+        }
+    
+    }
 }
 
-
-
-.favorite-btn{
-
-    width: 30px;
-    height: 30px;
-
-
-    input[type="checkbox"]{
-        display: none;
-        
-
-        &:checked + label .heart-icon.fas {
-            opacity: 100;
-            animation: animation-like-in 0.3s linear forwards ;
-            display: inline-block;
-            transform: scale(0.2);
-            background-image: $color-gradiant-reverse;
-            background-clip: text;
-            color: transparent;
-        
-        }
-
-        
-        &:checked + label .heart-icon.far {
-            opacity: 0 ;
-            transform: scale(0.2);
-        
-        }
-
-        &:not(:checked) + label .heart-icon.fas {
-            animation: animation-like-out 0.3s linear forwards ;
-            background-image: $color-gradiant-reverse;
-            background-clip: text;
-            color: transparent;
-        
-        }
-
-
-        &:not(:checked) + label .heart-icon.far {
-            animation: animation-like-in 0.3s linear forwards ;
-            color: black;
-
-        }
-    }
-
-    label{
-        cursor: pointer;
-        position: relative;
-
-        .heart-icon {
-            font-size: 30px;
-            transition: all 0.3s ease-in-out;
-        }
-
-        i{ 
-            position: absolute;
-        }
-    }
-
-
-}
 
 
 
