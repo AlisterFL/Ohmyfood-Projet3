@@ -17,7 +17,8 @@ body {
 }
 
 .loader {
-  animation: anim-loader 5s linear forwards;
+  -webkit-animation: anim-loader 5s linear forwards;
+          animation: anim-loader 5s linear forwards;
   position: fixed;
   width: 100%;
   max-width: 1400px;
@@ -29,13 +30,28 @@ body {
   z-index: 1;
 }
 .loader .circular {
-  animation: anim-rotation 2s linear infinite;
+  -webkit-animation: anim-rotation 2s linear infinite;
+          animation: anim-rotation 2s linear infinite;
   width: 200px;
   stroke: #9356DC;
 }
 .loader .circular .path {
-  animation: anim-mouv-elast 1.5s ease-in-out infinite;
+  -webkit-animation: anim-mouv-elast 1.5s ease-in-out infinite;
+          animation: anim-mouv-elast 1.5s ease-in-out infinite;
   stroke-linecap: round; /*Bord arrondi*/
+}
+@-webkit-keyframes anim-loader {
+  0% {
+    visibility: visible;
+    opacity: 100%;
+  }
+  70% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+    visibility: hidden;
+  }
 }
 @keyframes anim-loader {
   0% {
@@ -50,9 +66,28 @@ body {
     visibility: hidden;
   }
 }
+@-webkit-keyframes anim-rotation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes anim-rotation {
   100% {
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes anim-mouv-elast {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0px;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -20px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -140px;
   }
 }
 @keyframes anim-mouv-elast {
@@ -138,6 +173,9 @@ header {
   padding: 40px 5%;
   row-gap: 20px;
   width: 100%;
+  opacity: 0;
+  -webkit-animation: animation-fade-in-up 1s 5s ease-out forwards;
+          animation: animation-fade-in-up 1s 5s ease-out forwards;
 }
 .fonctionnement .etape {
   display: flex;
@@ -185,6 +223,9 @@ header {
   width: 100%;
   padding: 50px 5%;
   background-color: #F7F7F7;
+  opacity: 0;
+  -webkit-animation: animation-fade-in-up 1s 6s ease-out forwards;
+          animation: animation-fade-in-up 1s 6s ease-out forwards;
 }
 .liste-restaurants .restaurant {
   display: flex;
@@ -245,7 +286,8 @@ header {
 }
 .favorite-btn input[type=checkbox]:checked + label .heart-icon.fas {
   opacity: 100;
-  animation: animation-like-in 0.3s linear forwards;
+  -webkit-animation: animation-like-in 0.3s linear forwards;
+          animation: animation-like-in 0.3s linear forwards;
   display: inline-block;
   transform: scale(0.2);
   background-image: linear-gradient(0deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
@@ -258,14 +300,16 @@ header {
   transform: scale(0.2);
 }
 .favorite-btn input[type=checkbox]:not(:checked) + label .heart-icon.fas {
-  animation: animation-like-out 0.3s linear forwards;
+  -webkit-animation: animation-like-out 0.3s linear forwards;
+          animation: animation-like-out 0.3s linear forwards;
   background-image: linear-gradient(0deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
 }
 .favorite-btn input[type=checkbox]:not(:checked) + label .heart-icon.far {
-  animation: animation-like-in 0.3s linear forwards;
+  -webkit-animation: animation-like-in 0.3s linear forwards;
+          animation: animation-like-in 0.3s linear forwards;
   color: black;
 }
 .favorite-btn label {
@@ -279,6 +323,18 @@ header {
 .favorite-btn label i {
   position: absolute;
 }
+@-webkit-keyframes animation-like-in {
+  0% {
+    transform: scale(0.2);
+    opacity: 100;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @keyframes animation-like-in {
   0% {
     transform: scale(0.2);
@@ -289,6 +345,20 @@ header {
   }
   100% {
     transform: scale(1);
+  }
+}
+@-webkit-keyframes animation-like-out {
+  0% {
+    transform: scale(1);
+    opacity: 100;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 100;
+  }
+  100% {
+    transform: scale(0.2);
+    opacity: 0;
   }
 }
 @keyframes animation-like-out {
@@ -316,6 +386,9 @@ footer {
   row-gap: 10px;
   background-color: #353535;
   color: white;
+  opacity: 0;
+  -webkit-animation: animation-fade-in-up 1s 8s ease-out forwards;
+          animation: animation-fade-in-up 1s 8s ease-out forwards;
 }
 footer svg {
   width: 90px;
@@ -328,4 +401,26 @@ footer i {
 }
 footer a {
   color: white;
+}
+
+@-webkit-keyframes animation-fade-in-up {
+  0% {
+    opacity: 0%;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes animation-fade-in-up {
+  0% {
+    opacity: 0%;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
 }/*# sourceMappingURL=style.css.map */

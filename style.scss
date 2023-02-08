@@ -166,6 +166,8 @@ header{
 
 .fonctionnement{
     @include miseEnPage;
+    opacity: 0;
+    animation: animation-fade-in-up 1s 5s ease-out forwards;
 
     .etape{
         display: flex;
@@ -217,6 +219,9 @@ header{
 
     padding: 50px 5%;
     background-color: $color-background;
+
+    opacity: 0;
+    animation: animation-fade-in-up 1s 6s ease-out forwards; 
 
     .restaurant{
         display: flex;
@@ -379,6 +384,8 @@ footer{
     
     color: white;
 
+    opacity: 0;
+    animation: animation-fade-in-up 1s 8s ease-out forwards;
 
     svg {        
         width: 90px;
@@ -397,4 +404,15 @@ footer{
         color: white;
     }
 
+}
+
+@keyframes animation-fade-in-up{
+    0%{
+        opacity: 0%;
+        transform:translateY(100px);
+    }
+    100%{
+        opacity: 100%;
+        transform:translateY(0px);
+    }
 }

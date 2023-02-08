@@ -61,15 +61,28 @@ form h2::after {
 }
 form .entrees {
   opacity: 0;
-  animation: animation-fade-in-up 1s ease-out forwards;
+  -webkit-animation: animation-fade-in-up 1s ease-out forwards;
+          animation: animation-fade-in-up 1s ease-out forwards;
 }
 form .plats {
   opacity: 0;
-  animation: animation-fade-in-up 1s 1s ease-out forwards;
+  -webkit-animation: animation-fade-in-up 1s 1s ease-out forwards;
+          animation: animation-fade-in-up 1s 1s ease-out forwards;
 }
 form .desserts {
   opacity: 0;
-  animation: animation-fade-in-up 1s 2s ease-out forwards;
+  -webkit-animation: animation-fade-in-up 1s 2s ease-out forwards;
+          animation: animation-fade-in-up 1s 2s ease-out forwards;
+}
+@-webkit-keyframes animation-fade-in-up {
+  0% {
+    opacity: 0%;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
 }
 @keyframes animation-fade-in-up {
   0% {
@@ -143,7 +156,16 @@ form .desserts {
   width: 20%;
 }
 .produit label:hover i {
-  animation: animation-icon-check-rotation 0.35s ease-in-out forwards;
+  -webkit-animation: animation-icon-check-rotation 0.35s ease-in-out forwards;
+          animation: animation-icon-check-rotation 0.35s ease-in-out forwards;
+}
+@-webkit-keyframes animation-icon-check-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
 }
 @keyframes animation-icon-check-rotation {
   0% {
