@@ -23,6 +23,7 @@ $color-dark-background: #353535;
 
 @mixin normalShadow{
     box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.20);
+    transition: all 0.3s;
 }
 @mixin hoverScaleShadow{
     box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.40);
@@ -40,11 +41,15 @@ body{
     counter-reset: fonctionnement;
 }
 
+
+
 header{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+
+    width: 90%;
+    margin: 0 auto;
     line-height: 0;
     background-color: white;
     padding: 16px;
@@ -149,9 +154,10 @@ header{
 
 .liste-restaurants{
     @include miseEnPage;
-    padding: 50px 5%;
 
+    padding: 50px 5%;
     background-color: $color-background;
+
 
     .restaurant{
         display: flex;
@@ -160,7 +166,6 @@ header{
         border-radius: 15px;
 
         @include normalShadow;
-        transition: all 0.3s;
 
         &:hover{
             @include hoverScaleShadow;
@@ -328,4 +333,19 @@ footer{
         width: 20px;
     }
 
+    a{
+        color: white;
+    }
+
+}
+
+@keyframes animation-fade-in-up{
+    0%{
+        opacity: 0%;
+        transform:translateY(100px);
+    }
+    100%{
+        opacity: 100%;
+        transform:translateY(0px);
+    }
 }

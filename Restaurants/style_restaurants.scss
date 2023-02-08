@@ -6,6 +6,14 @@ $color-gradiant: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220
 $color-gradiant-reverse: linear-gradient(0deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
 $color-dark-background: #353535;
 
+@mixin produitShadow{
+    box-shadow: 0px 0px 12px 0px rgb(0 0 0 / 14%);
+    transition: all 0.3s;
+}
+@mixin hoverScaleProduitShadow{
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,25%);
+    transform: scale(1.01);
+}
 
 header{
     position: relative;
@@ -91,10 +99,15 @@ form{
     height: 70px;
     background-color: #FFF;
 
+    @include produitShadow();
 
     input[type="radio"]{
         display: none;
         
+    }
+
+    &:hover{
+        @include hoverScaleProduitShadow();
     }
 
     
@@ -140,6 +153,7 @@ form{
             
         
             background-color: $color-tertiary;
+            transition: width 0.3s;
 
             i{
                 background-color: #FFF;
@@ -150,6 +164,24 @@ form{
             }
         }
 
+        &:hover{
+            .icon-check{
+                width: 20%;
+                  
+            }
+            i{
+                animation: animation-icon-check-rotation 0.35s ease-in-out forwards;
+
+                @keyframes animation-icon-check-rotation{
+                    0%{
+                        transform:rotate(0deg);
+                    }
+                    100%{
+                        transform:rotate(-360deg);
+                    }
+                }
+            }
+        }
     }
 
 }

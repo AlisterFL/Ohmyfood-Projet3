@@ -66,9 +66,15 @@ form h2::after {
   border-radius: 13px;
   height: 70px;
   background-color: #FFF;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.14);
+  transition: all 0.3s;
 }
 .produit input[type=radio] {
   display: none;
+}
+.produit:hover {
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.25);
+  transform: scale(1.01);
 }
 .produit label {
   display: flex;
@@ -103,12 +109,36 @@ form h2::after {
   height: 100%;
   width: 0%;
   background-color: #99E2D0;
+  transition: width 0.3s;
 }
 .produit label .icon-check i {
   background-color: #FFF;
   color: #99E2D0;
   border-radius: 20px;
   padding: 5px;
+}
+.produit label:hover .icon-check {
+  width: 20%;
+}
+.produit label:hover i {
+  -webkit-animation: animation-icon-check-rotation 0.35s ease-in-out forwards;
+          animation: animation-icon-check-rotation 0.35s ease-in-out forwards;
+}
+@-webkit-keyframes animation-icon-check-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes animation-icon-check-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
 }
 
 .commander {
