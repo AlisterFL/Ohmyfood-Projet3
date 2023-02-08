@@ -59,6 +59,41 @@ form h2::after {
   height: 3px;
   background-color: #99E2D0;
 }
+form .entrees {
+  opacity: 0;
+  -webkit-animation: animation-fade-in-up 1s ease-out forwards;
+          animation: animation-fade-in-up 1s ease-out forwards;
+}
+form .plats {
+  opacity: 0;
+  -webkit-animation: animation-fade-in-up 1s 1s ease-out forwards;
+          animation: animation-fade-in-up 1s 1s ease-out forwards;
+}
+form .desserts {
+  opacity: 0;
+  -webkit-animation: animation-fade-in-up 1s 2s ease-out forwards;
+          animation: animation-fade-in-up 1s 2s ease-out forwards;
+}
+@-webkit-keyframes animation-fade-in-up {
+  0% {
+    opacity: 0%;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}
+@keyframes animation-fade-in-up {
+  0% {
+    opacity: 0%;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}
 
 .produit {
   display: flex;

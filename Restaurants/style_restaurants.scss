@@ -87,6 +87,29 @@ form{
         }
     }
 
+    .entrees{
+        opacity: 0;
+        animation: animation-fade-in-up 1s ease-out forwards;
+    }
+    .plats{
+        opacity: 0;
+        animation: animation-fade-in-up 1s 1s ease-out forwards;
+    }
+    .desserts{
+        opacity: 0;
+        animation: animation-fade-in-up 1s 2s ease-out forwards;
+    }
+
+    @keyframes animation-fade-in-up{
+        0%{
+            opacity: 0%;
+            transform:translateY(100px);
+        }
+        100%{
+            opacity: 100%;
+            transform:translateY(0px);
+        }
+    }
 }
 
 
