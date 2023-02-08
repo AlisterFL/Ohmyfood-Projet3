@@ -1,0 +1,189 @@
+$color-background: #F7F7F7;
+$color-primary: #9356DC;
+$color-secondary:#FF79DA;
+$color-tertiary:#99E2D0;
+$color-gradiant: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+$color-gradiant-reverse: linear-gradient(0deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+$color-dark-background: #353535;
+
+
+header{
+    position: relative;
+    .retour{
+        position: absolute;
+        left: 0;
+
+        a{
+            color: black;
+            font-size:20px;
+        }
+    }
+}
+
+
+
+
+main{
+    width: 100%;
+    background-color: $color-background;
+}
+
+.banniere{
+    object-fit: cover;
+    height: 275px;
+    width: 100%;
+}
+
+
+.menu{
+    width: 100%;
+    position: relative;
+    top: -2%;
+    background-color: $color-background;
+    border-radius: 25px 25px 0 0;
+
+
+
+}
+
+.enseigne{
+    display: flex;
+    justify-content: space-between;
+    font-family: Shrikhand;
+    padding: 5% 5% 0% 5%;
+            
+}
+form{
+    margin: 0 5%;
+
+    .liste{
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    h2{
+        margin-top: 25px;
+        font-weight: 300;
+        font-size: 18px;
+        text-transform: uppercase;
+
+        &::after{
+
+            content: "";
+            display: flex;
+            width: 40px;
+            margin: 0 0 13px 0;
+            height: 3px;
+            background-color: $color-tertiary;
+        }
+    }
+
+}
+
+
+
+.produit{
+    display: flex;
+    overflow: hidden;
+
+    border-radius: 13px;
+    height: 70px;
+    background-color: #FFF;
+
+
+    input[type="radio"]{
+        display: none;
+        
+    }
+
+    
+    label{
+        display: flex;
+        justify-content: space-between;
+        width:100%;
+
+        .description{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        
+            width: 100%;
+            padding: 10px 2%;
+
+
+            h3, span{
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                width: 85%;
+            }
+
+            h4{
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+            
+                height: 100%;
+            }
+        }
+
+        .icon-check{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        
+            height: 100%;
+            width: 0%;
+            
+        
+            background-color: $color-tertiary;
+
+            i{
+                background-color: #FFF;
+                color: $color-tertiary;
+            
+                border-radius: 20px;
+                padding: 5px;
+            }
+        }
+
+    }
+
+}
+
+
+.commander{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input{
+        display: none;
+    }
+
+    label{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 200px;
+        height: 60px;
+        background: $color-gradiant;
+        border-radius: 30px;
+        margin-top: 40px;
+
+        color: white;
+
+    }
+
+}
+
+
+
+
+
+
+

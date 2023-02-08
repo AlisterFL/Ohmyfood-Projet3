@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scable=no">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_restaurants.css">
+    <link rel="stylesheet" href="../style.css">
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,74 +20,24 @@
 
 
     <title>OhMyFood</title>
+
+
 </head>
-
-
 <body>
-
-    <div class="loader">
-        <svg class="circular" viewBox="25 25 50 50">
-          <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2"/>
-        </svg>
-    </div>
-
     <header>
-        <a href="#" class="logo"><img src= "images/logo/ohmyfood.svg"></a>
+
+        <a href="#" class="logo"><img src= "../images/logo/ohmyfood.svg"></a>
     
     </header>
 
-    <section class="location">
-
-        <div class="position-icon">
-            <i class="fa-solid fa-location-dot"></i>
-        </div>
-        <span>Paris, Belleville</span>
-    </section>
+    <main>
+        <img class="banniere" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Restaurant la palette du goût">
+        
+        <section class="menu">
 
 
-    <section class="presentation">
-
-        <h1>Réservez le menu qui vous convient</h1>
-        <p>Découvrez des restaurants d'excpetion, sélectionnés par nos soins.</p>
-        <a href="#goto-restaurant" class="btn-goto-restaurant">Explorer nos restaurants</a>
-    </section>
-
-
-
-    <section class="fonctionnement">
-
-        <h1>Fonctionnement</h1>
-        <div class="etape">
-            <a href="#"->
-                <i class="fa-solid fa-mobile-screen-button"></i>
-                <span>Choisissez un restaurant</span>
-            </a>
-            <a href="#">
-                <i class="fa-solid fa-list-ul"></i>
-                <span>Composez votre menu</span>
-            </a>
-            <a href="#">
-                <i class="fa-solid fa-store"></i>
-                <span>Dégustez au restaurant</span>
-            </a>
-        </div>
-    </section>
-
-
-    <section class="liste-restaurants">    
-        <h1 id="goto-restaurant">Restaurants</h1>
-
-
-        <a href="Restaurants/La_palette_du_gout.html" class="restaurant nouveau-restaurant">
-
-            <div class="container">
-                <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Restaurant la palette du goût">
-                
-                <div class="description">
-                    <div class="enseigne">
-                        <h2>La palette du goût</h2>
-                        <span>Ménilmontant</span>
-                    </div>
+                <div class="enseigne">
+                    <h1>La note enchantée</h1>
 
                     <div class="favorite-btn">
                         <input type="checkbox" id="fav-laPaletteDuGout">
@@ -95,84 +46,176 @@
                         <i class="fas fa-heart heart-icon"></i>
                         </label>
                     </div>
-
                 </div>
-            </div>
-        </a>
 
 
-        <a href="Restaurants/La_note_enchantee.html" class="restaurant nouveau-restaurant">
-            
-            <div class="container">
-                <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Restaurant la note enchantée">
-                
-                <div class="description">
-                    <div class="enseigne">
-                        <h2>La note enchantée</h2>
-                        <span>Charonne</span>
+                <form>
+                    
+                    <div class="entrees">
+                        <h2>Entrées</h2>
+                        <div class="liste">
+                            <div class="produit">
+                                <input type="radio" name="entrees" id="select-entree1">
+                                <label for="select-entree1">
+                                    <div class="description">
+                                        <h3>Tartare de poulpe acidulé</h3>
+                                        <span>Aux zestes d'orange</span>
+                                        <h4>25€</h4>
+                                    </div>
+                                    <div class="icon-check">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div class="produit">
+                                <input type="radio" name="entrees" id="select-entree2">
+                                <label for="select-entree2">
+                                    <div class="description">
+                                        <h3>Velouté de légumes d'antan</h3>
+                                        <span>Carotte, panais, topinambour</span>
+                                        <h4>35€</h4>
+                                    </div>
+                                    <div class="icon-check">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="produit">
+                                <input type="radio" name="entrees" id="select-entree3">
+                                <label for="select-entree3">
+                                    <div class="description">
+                                        <h3>Soupe à l'oignon</h3>
+                                        <span>Revisitée</span>
+                                        <h4>20€</h4>
+                                    </div>
+                                    <div class="icon-check">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="plats">
+                        <h2>Plats</h2>
+                        <div class="liste">
+
+                            <div class="produit">
+                                <input type="radio" name="plats" id="select-plat1">
+                                <label for="select-plat1">
+                                    <div class="description">
+                                        <h3>Coquilles Saint-Jacques</h3>
+                                        <span>Accompagnées d'une purée de panais</span>
+                                        <h4>40€</h4>
+                                    </div>
+                                    <div class="icon-check">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div class="produit">
+                                <input type="radio" name="plats" id="select-plat2">
+                                <label for="select-plat2">
+                                    <div class="description">
+                                        <h3>Magret de canard</h3>
+                                        <span>Et parmentier de pommes de terre</span>
+                                        <h4>35€</h4>
+                                    </div>
+                                    <div class="icon-check">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div class="produit">
+                                <input type="radio" name="plats" id="select-plat3">
+                                <label for="select-plat3">
+                                    <div class="description">
+                                        <h3>Pigeonneau d’Ille-et-Vilaine</h3>
+                                        <span>Sur son lit de gnocchis aux légumes</span>
+                                        <h4>44€</h4>
+                                    </div>
+                                    <div class="icon-check">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="desserts">
+                        <h2>Desserts</h2>
+
+                        <div class="liste">
+
+                            <div class="produit">
+                                <input type="radio" name="desserts" id="select-dessert1">
+                                <label for="select-dessert1">
+                                    <div class="description">
+                                        <h3>Pétales de violettes glacés</h3>
+                                        <span>Et purée de noisettes</span>
+                                        <h4>18€</h4>
+                                    </div>
+                                    <div class="icon-check">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <div class="produit">
+                                <input type="radio" name="desserts" id="select-dessert2">
+                                <label for="select-dessert2">
+                                    <div class="description">
+                                        <h3>Fondant au chocolat</h3>
+                                        <span>Revisité</span>
+                                        <h4>22€</h4>
+                                    </div>
+                                    <div class="icon-check">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                </label>
+                            </div>
+
+
+                            <div class="produit">
+                                <input type="radio" name="desserts" id="select-dessert3">
+                                <label for="select-dessert3">
+                                    <div class="description">
+                                        <h3>Millefeuille croustillant</h3>
+                                        <span>Myrtilles et pâte d’amande</span>
+                                        <h4>23€</h4>
+                                    </div>
+                                    <div class="icon-check">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        
                     </div>
                     
-                    <div class="favorite-btn">
-                        <input type="checkbox" id="fav-laNoteEnchantee">
-                        <label for="fav-laNoteEnchantee">
-                        <i class="far fa-heart heart-icon"></i>
-                        <i class="fas fa-heart heart-icon"></i>
+                    <div class="commander">
+                        <input type="button" id="commande">
+                        <label for="commande">
+                            <span>Commander</span>
                         </label>
                     </div>
 
-                </div>
-            </div>
-        </a>
+                </form>
 
 
-        <a href="Restaurants/A_la_francaise.html" class="restaurant">
 
-            <div class="container">
-                <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="À la française">
-                
-                <div class="description">
-                    <div class="enseigne">
-                        <h2>À la française</h2>
-                        <span>Cité rouge</span>
-                    </div>
-                
-                    <div class="favorite-btn">
-                        <input type="checkbox" id="fav-aLaFrancaise">
-                        <label for="fav-aLaFrancaise">
-                        <i class="far fa-heart heart-icon"></i>
-                        <i class="fas fa-heart heart-icon"></i>
-                        </label>
-                    </div>
+        </section>
+    </main>
 
-                 </div>
-            </div>
-        </a>
-
-        <a href="Restaurants/Le_delice_des_sens.html" class="restaurant">
-        
-            <div class="container">
-                <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
-        
-                <div class="description">
-                    <div class="enseigne">
-                        <h2>Le délice des sens</h2>
-                        <span>Folie-méricourt</span>
-                    </div>
-
-                    <div class="favorite-btn">
-                        <input type="checkbox" id="fav-leDeliceDesSens">
-                        <label for="fav-leDeliceDesSens">
-                        <i class="far fa-heart heart-icon"></i>
-                        <i class="fas fa-heart heart-icon"></i>
-                        </label>
-                    </div>
-
-                </div>
-            </div>
-        </a>
-
-
-    </section>
 
     <footer>
 
@@ -190,14 +233,14 @@
         </p>
         <div class="proposer">
             <i class="fa-solid fa-utensils"></i>
-            <a href="#">Proposer un restaurant</a>
+            <span>Proposer un restaurant</span>
         </div>
          <div class="partenaire">
             <i class="fa-solid fa-handshake-angle"></i>
-            <a href="#">Devenir partenaire</a>
+            <span>Devenir partenaire</span>
         </div>
-        <a href="#">Mentions légales</a>
-        <a href="mailto:OhMyFood@gmail.com">Contact</a>
+        <span>Mentions légales</span>
+        <span>Contact</span>
     </footer>
 
 </body>
