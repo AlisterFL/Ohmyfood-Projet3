@@ -41,6 +41,66 @@ body{
     counter-reset: fonctionnement;
 }
 
+.loader {
+    animation: anim-loader 5s linear forwards;
+    position: fixed;
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+    .circular {
+        animation: anim-rotation 2s linear infinite;
+        width: 200px;
+        
+        stroke: $color-primary;
+
+        .path {
+            animation: anim-mouv-elast 1.5s ease-in-out infinite;
+            stroke-linecap: round; /*Bord arrondi*/
+        }
+    }
+    @keyframes anim-loader{
+        0%{
+            visibility: visible;
+            opacity: 100%;
+        }
+        70%{
+            opacity: 100%;
+        }
+        100%{
+            opacity: 0%;
+            visibility: hidden;
+        }
+    }
+
+    @keyframes anim-rotation {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    
+    @keyframes anim-mouv-elast {
+        0% {
+            stroke-dasharray: 1, 200;
+            stroke-dashoffset: 0px;
+        }
+        50% {
+            stroke-dasharray: 89, 200;
+            stroke-dashoffset: -20px;
+        }
+        100% {
+            stroke-dasharray: 89, 200;
+            stroke-dashoffset: -140px;
+        }
+    }
+}
+
 
 
 header{
@@ -157,7 +217,6 @@ header{
 
     padding: 50px 5%;
     background-color: $color-background;
-
 
     .restaurant{
         display: flex;
@@ -320,6 +379,7 @@ footer{
     
     color: white;
 
+
     svg {        
         width: 90px;
 
@@ -337,15 +397,4 @@ footer{
         color: white;
     }
 
-}
-
-@keyframes animation-fade-in-up{
-    0%{
-        opacity: 0%;
-        transform:translateY(100px);
-    }
-    100%{
-        opacity: 100%;
-        transform:translateY(0px);
-    }
 }
