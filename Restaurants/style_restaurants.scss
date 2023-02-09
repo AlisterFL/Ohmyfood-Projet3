@@ -87,81 +87,6 @@ form{
         }
     }
 
-
-    .entrees{
-        opacity: 0;
-        animation: animation-fade-in-up 1s ease-out forwards;
-
-        .delay1-1{
-            opacity: 0;
-            animation: animation-fade-in-up 1s 1s ease-out forwards;
-        }
-        .delay1-2{
-            opacity: 0;
-            animation: animation-fade-in-up 1s 1.2s ease-out forwards;
-        }
-        .delay1-3{
-            opacity: 0;
-            animation: animation-fade-in-up 1s 1.4s ease-out forwards;
-        }
-        .delay1-4{
-            opacity: 0;
-            animation: animation-fade-in-up 1s 1.6s ease-out forwards;
-        }
-    }
-
-    .plats{
-        opacity: 0;
-        animation: animation-fade-in-up 1s 1.8s ease-out forwards;
-
-        .delay2-1{
-            opacity: 0;
-            animation: animation-fade-in-up 1s 2s ease-out forwards;
-        }
-        .delay2-2{
-            opacity: 0;
-            animation: animation-fade-in-up 1s 2.2s ease-out forwards;
-        }
-        .delay2-3{
-            opacity: 0;
-            animation: animation-fade-in-up 1s 2.4s ease-out forwards;
-        }
-    }
-    .desserts{
-        opacity: 0;
-        animation: animation-fade-in-up 1s 2.6s ease-out forwards;
-
-        .delay3-1{
-            opacity: 0;
-            animation: animation-fade-in-up 1s 2.8s ease-out forwards;
-        }
-        .delay3-2{
-            opacity: 0;
-            animation: animation-fade-in-up 1s 3s ease-out forwards;
-        }
-        .delay3-3{
-            opacity: 0;
-            animation: animation-fade-in-up 1s 3.2s ease-out forwards;
-        }
-
-        .commander{
-            .delay4-1{
-                opacity: 0;
-                animation: animation-fade-in-up 1s 3.4s ease-out forwards;
-            }
-        }
-    }
-
-    @keyframes animation-fade-in-up{
-        0%{
-            opacity: 0%;
-            transform:translateY(30px);
-        }
-        100%{
-            opacity: 100%;
-            transform:translateY(0px);
-        }
-    }
 }
 
 
@@ -175,11 +100,6 @@ form{
     background-color: #FFF;
 
     @include produitShadow();
-
-    input[type="radio"]{
-        display: none;
-        
-    }
 
     &:hover{
         @include hoverScaleProduitShadow();
@@ -252,8 +172,6 @@ form{
         }
     }
 
-    
-
 }
 
 
@@ -281,6 +199,69 @@ form{
 
     }
 
+}
+/* Animation arrivée sur le site */
+.entrees{
+    opacity: 0;
+    animation: animation-fade-in-up 1s ease-out forwards;
+
+    .delay1-1{
+        opacity: 0;
+        animation: animation-fade-in-up 1s 0.4s ease-out forwards;
+    }
+    .delay1-2{
+        opacity: 0;
+        animation: animation-fade-in-up 1s 0.6s ease-out forwards;
+    }
+    .delay1-3{
+        opacity: 0;
+        animation: animation-fade-in-up 1s 0.8s ease-out forwards;
+    }
+    .delay1-4{
+        opacity: 0;
+        animation: animation-fade-in-up 1s 1s ease-out forwards;
+    }
+}
+
+.plats{
+    opacity: 0;
+    animation: animation-fade-in-up 1s 1.6s ease-out forwards;
+
+    .delay2-1{
+        opacity: 0;
+        animation: animation-fade-in-up 1s 1.8s ease-out forwards;
+    }
+    .delay2-2{
+        opacity: 0;
+        animation: animation-fade-in-up 1s 2s ease-out forwards;
+    }
+    .delay2-3{
+        opacity: 0;
+        animation: animation-fade-in-up 1s 2.2s ease-out forwards;
+    }
+}
+.desserts{
+    opacity: 0;
+    animation: animation-fade-in-up 1s 2.8s ease-out forwards;
+
+    .delay3-1{
+        opacity: 0;
+        animation: animation-fade-in-up 1s 3s ease-out forwards;
+    }
+    .delay3-2{
+        opacity: 0;
+        animation: animation-fade-in-up 1s 3.2s ease-out forwards;
+    }
+    .delay3-3{
+        opacity: 0;
+        animation: animation-fade-in-up 1s 3.4s ease-out forwards;
+    }
+
+}
+
+.delay4-1{
+    opacity: 0;
+    animation: animation-fade-in-up 1s 4s ease-out forwards;
 }
 
 

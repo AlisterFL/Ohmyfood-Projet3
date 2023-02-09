@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header {
   position: relative;
 }
@@ -59,72 +60,6 @@ form h2::after {
   height: 3px;
   background-color: #99E2D0;
 }
-form .entrees {
-  opacity: 0;
-  animation: animation-fade-in-up 1s ease-out forwards;
-}
-form .entrees .delay1-1 {
-  opacity: 0;
-  animation: animation-fade-in-up 1s 1s ease-out forwards;
-}
-form .entrees .delay1-2 {
-  opacity: 0;
-  animation: animation-fade-in-up 1s 1.2s ease-out forwards;
-}
-form .entrees .delay1-3 {
-  opacity: 0;
-  animation: animation-fade-in-up 1s 1.4s ease-out forwards;
-}
-form .entrees .delay1-4 {
-  opacity: 0;
-  animation: animation-fade-in-up 1s 1.6s ease-out forwards;
-}
-form .plats {
-  opacity: 0;
-  animation: animation-fade-in-up 1s 1.8s ease-out forwards;
-}
-form .plats .delay2-1 {
-  opacity: 0;
-  animation: animation-fade-in-up 1s 2s ease-out forwards;
-}
-form .plats .delay2-2 {
-  opacity: 0;
-  animation: animation-fade-in-up 1s 2.2s ease-out forwards;
-}
-form .plats .delay2-3 {
-  opacity: 0;
-  animation: animation-fade-in-up 1s 2.4s ease-out forwards;
-}
-form .desserts {
-  opacity: 0;
-  animation: animation-fade-in-up 1s 2.6s ease-out forwards;
-}
-form .desserts .delay3-1 {
-  opacity: 0;
-  animation: animation-fade-in-up 1s 2.8s ease-out forwards;
-}
-form .desserts .delay3-2 {
-  opacity: 0;
-  animation: animation-fade-in-up 1s 3s ease-out forwards;
-}
-form .desserts .delay3-3 {
-  opacity: 0;
-  animation: animation-fade-in-up 1s 3.2s ease-out forwards;
-}
-form .desserts .commander .delay4-1 {
-  opacity: 0;
-  animation: animation-fade-in-up 1s 3.4s ease-out forwards;
-}
-@keyframes animation-fade-in-up {
-  0% {
-    opacity: 0%;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 100%;
-    transform: translateY(0px);
-  }
-}
 
 .produit {
   display: flex;
@@ -134,9 +69,6 @@ form .desserts .commander .delay4-1 {
   background-color: #FFF;
   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.14);
   transition: all 0.3s;
-}
-.produit input[type=radio] {
-  display: none;
 }
 .produit:hover {
   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.25);
@@ -211,4 +143,65 @@ form .desserts .commander .delay4-1 {
   border-radius: 30px;
   margin-top: 40px;
   color: white;
+}
+
+/* Animation arrivée sur le site */
+.entrees {
+  opacity: 0;
+  animation: animation-fade-in-up 1s ease-out forwards;
+}
+.entrees .delay1-1 {
+  opacity: 0;
+  animation: animation-fade-in-up 1s 0.4s ease-out forwards;
+}
+.entrees .delay1-2 {
+  opacity: 0;
+  animation: animation-fade-in-up 1s 0.6s ease-out forwards;
+}
+.entrees .delay1-3 {
+  opacity: 0;
+  animation: animation-fade-in-up 1s 0.8s ease-out forwards;
+}
+.entrees .delay1-4 {
+  opacity: 0;
+  animation: animation-fade-in-up 1s 1s ease-out forwards;
+}
+
+.plats {
+  opacity: 0;
+  animation: animation-fade-in-up 1s 1.6s ease-out forwards;
+}
+.plats .delay2-1 {
+  opacity: 0;
+  animation: animation-fade-in-up 1s 1.8s ease-out forwards;
+}
+.plats .delay2-2 {
+  opacity: 0;
+  animation: animation-fade-in-up 1s 2s ease-out forwards;
+}
+.plats .delay2-3 {
+  opacity: 0;
+  animation: animation-fade-in-up 1s 2.2s ease-out forwards;
+}
+
+.desserts {
+  opacity: 0;
+  animation: animation-fade-in-up 1s 2.8s ease-out forwards;
+}
+.desserts .delay3-1 {
+  opacity: 0;
+  animation: animation-fade-in-up 1s 3s ease-out forwards;
+}
+.desserts .delay3-2 {
+  opacity: 0;
+  animation: animation-fade-in-up 1s 3.2s ease-out forwards;
+}
+.desserts .delay3-3 {
+  opacity: 0;
+  animation: animation-fade-in-up 1s 3.4s ease-out forwards;
+}
+
+.delay4-1 {
+  opacity: 0;
+  animation: animation-fade-in-up 1s 4s ease-out forwards;
 }/*# sourceMappingURL=style_restaurants.css.map */

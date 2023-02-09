@@ -42,7 +42,7 @@ body{
 }
 
 .loader {
-    animation: anim-loader 5s linear forwards;
+    animation: anim-loader 2.5s linear forwards;
     position: fixed;
     width: 100%;
     max-width: 1400px;
@@ -139,6 +139,9 @@ header{
     @include miseEnPage;
     align-items: center;
     background-color: $color-background;
+
+    opacity: 0;
+    animation: animation-fade-in-up 1s 2.5s ease-out forwards; 
     h1{
         font-size: 20px;
         font-weight: 700;
@@ -167,7 +170,7 @@ header{
 .fonctionnement{
     @include miseEnPage;
     opacity: 0;
-    animation: animation-fade-in-up 1s 5s ease-out forwards;
+    animation: animation-fade-in-up 1s 3.2s ease-out forwards;
 
     .etape{
         display: flex;
@@ -221,7 +224,7 @@ header{
     background-color: $color-background;
 
     opacity: 0;
-    animation: animation-fade-in-up 1s 6s ease-out forwards; 
+    animation: animation-fade-in-up 1s 4s ease-out forwards; 
 
     .restaurant{
         display: flex;
@@ -361,7 +364,7 @@ footer{
 @keyframes animation-fade-in-up{
     0%{
         opacity: 0%;
-        transform:translateY(100px);
+        transform:translateY(40px);
     }
     100%{
         opacity: 100%;
