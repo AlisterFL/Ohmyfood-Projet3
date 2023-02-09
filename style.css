@@ -284,8 +284,6 @@ footer {
   row-gap: 10px;
   background-color: #353535;
   color: white;
-  opacity: 0;
-  animation: animation-fade-in-up 1s 8s ease-out forwards;
 }
 footer svg {
   width: 90px;

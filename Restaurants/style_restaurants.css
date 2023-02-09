@@ -63,18 +63,62 @@ form .entrees {
   opacity: 0;
   animation: animation-fade-in-up 1s ease-out forwards;
 }
-form .plats {
+form .entrees .delay1-1 {
   opacity: 0;
   animation: animation-fade-in-up 1s 1s ease-out forwards;
 }
-form .desserts {
+form .entrees .delay1-2 {
+  opacity: 0;
+  animation: animation-fade-in-up 1s 1.2s ease-out forwards;
+}
+form .entrees .delay1-3 {
+  opacity: 0;
+  animation: animation-fade-in-up 1s 1.4s ease-out forwards;
+}
+form .entrees .delay1-4 {
+  opacity: 0;
+  animation: animation-fade-in-up 1s 1.6s ease-out forwards;
+}
+form .plats {
+  opacity: 0;
+  animation: animation-fade-in-up 1s 1.8s ease-out forwards;
+}
+form .plats .delay2-1 {
   opacity: 0;
   animation: animation-fade-in-up 1s 2s ease-out forwards;
+}
+form .plats .delay2-2 {
+  opacity: 0;
+  animation: animation-fade-in-up 1s 2.2s ease-out forwards;
+}
+form .plats .delay2-3 {
+  opacity: 0;
+  animation: animation-fade-in-up 1s 2.4s ease-out forwards;
+}
+form .desserts {
+  opacity: 0;
+  animation: animation-fade-in-up 1s 2.6s ease-out forwards;
+}
+form .desserts .delay3-1 {
+  opacity: 0;
+  animation: animation-fade-in-up 1s 2.8s ease-out forwards;
+}
+form .desserts .delay3-2 {
+  opacity: 0;
+  animation: animation-fade-in-up 1s 3s ease-out forwards;
+}
+form .desserts .delay3-3 {
+  opacity: 0;
+  animation: animation-fade-in-up 1s 3.2s ease-out forwards;
+}
+form .desserts .commander .delay4-1 {
+  opacity: 0;
+  animation: animation-fade-in-up 1s 3.4s ease-out forwards;
 }
 @keyframes animation-fade-in-up {
   0% {
     opacity: 0%;
-    transform: translateY(100px);
+    transform: translateY(30px);
   }
   100% {
     opacity: 100%;
@@ -98,12 +142,7 @@ form .desserts {
   box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.25);
   transform: scale(1.01);
 }
-.produit label {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-.produit label .description {
+.produit .description {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -111,19 +150,19 @@ form .desserts {
   width: 100%;
   padding: 10px 2%;
 }
-.produit label .description h3, .produit label .description span {
+.produit .description h3, .produit .description span {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   width: 85%;
 }
-.produit label .description h4 {
+.produit .description h4 {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   height: 100%;
 }
-.produit label .icon-check {
+.produit .icon-check {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,16 +172,16 @@ form .desserts {
   background-color: #99E2D0;
   transition: width 0.3s;
 }
-.produit label .icon-check i {
+.produit .icon-check i {
   background-color: #FFF;
   color: #99E2D0;
   border-radius: 20px;
   padding: 5px;
 }
-.produit label:hover .icon-check {
+.produit:hover .icon-check {
   width: 20%;
 }
-.produit label:hover i {
+.produit:hover i {
   animation: animation-icon-check-rotation 0.35s ease-in-out forwards;
 }
 @keyframes animation-icon-check-rotation {
