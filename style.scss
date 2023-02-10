@@ -217,7 +217,7 @@ header{
 }
 
 
-.liste-restaurants{
+.restaurants{
     @include miseEnPage;
 
     padding: 50px 5%;
@@ -225,6 +225,12 @@ header{
 
     opacity: 0;
     animation: animation-fade-in-up 1s 4s ease-out forwards; 
+
+    .liste-restaurants{
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
 
     .restaurant{
         display: flex;
@@ -294,7 +300,6 @@ header{
 
     width: 30px;
     height: 30px;
-    margin: 30px;
     position: relative;
     cursor: pointer;
 
@@ -331,6 +336,41 @@ header{
 
 
 }
+
+@media screen and (min-width:750px){
+    .restaurants{
+        .liste-restaurants{
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 3%;
+            justify-content: center;
+            
+    
+            a{
+                width:48%;
+            }
+        }
+    }
+    
+}
+
+@media screen and (min-width:1050px){
+    .restaurants{
+        .liste-restaurants{
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 3%;
+            justify-content: center;
+            
+    
+            a{
+                width:22%;
+            }
+        }
+    }
+    
+}
+
 
 
 

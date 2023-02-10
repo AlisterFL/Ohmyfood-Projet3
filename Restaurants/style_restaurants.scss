@@ -49,9 +49,6 @@ main{
     top: -2%;
     background-color: $color-background;
     border-radius: 25px 25px 0 0;
-
-
-
 }
 
 .enseigne{
@@ -200,6 +197,17 @@ form{
     }
 
 }
+
+@media screen and (min-width:1050px){
+    form{
+        flex-direction: row;
+        
+
+
+    }
+    
+}
+
 /* Animation arrivée sur le site */
 .entrees{
     opacity: 0;

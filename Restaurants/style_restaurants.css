@@ -145,6 +145,11 @@ form h2::after {
   color: white;
 }
 
+@media screen and (min-width: 1050px) {
+  form {
+    flex-direction: row;
+  }
+}
 /* Animation arrivée sur le site */
 .entrees {
   opacity: 0;

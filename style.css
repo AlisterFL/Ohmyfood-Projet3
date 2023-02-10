@@ -181,7 +181,7 @@ header {
   padding: 4px 7px;
 }
 
-.liste-restaurants {
+.restaurants {
   display: flex;
   flex-direction: column;
   padding: 40px 5%;
@@ -192,7 +192,12 @@ header {
   opacity: 0;
   animation: animation-fade-in-up 1s 4s ease-out forwards;
 }
-.liste-restaurants .restaurant {
+.restaurants .liste-restaurants {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.restaurants .restaurant {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -200,19 +205,19 @@ header {
   box-shadow: 0px 0px 16px 2px rgba(0, 0, 0, 0.2);
   transition: all 0.3s;
 }
-.liste-restaurants .restaurant:hover {
+.restaurants .restaurant:hover {
   box-shadow: 0px 0px 16px 2px rgba(0, 0, 0, 0.4);
   transform: scale(1.01);
   background-color: rgba(255, 255, 255, 0.975);
 }
-.liste-restaurants .restaurant img {
+.restaurants .restaurant img {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 15px 15px 0 0;
   height: 175px;
   width: 100%;
 }
-.liste-restaurants .restaurant .description {
+.restaurants .restaurant .description {
   display: flex;
   color: black;
   height: 65px;
@@ -220,18 +225,18 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-.liste-restaurants .restaurant .description .enseigne {
+.restaurants .restaurant .description .enseigne {
   display: flex;
   row-gap: 3px;
   flex-direction: column;
 }
-.liste-restaurants .restaurant .description h2 {
+.restaurants .restaurant .description h2 {
   font-size: 17px;
 }
-.liste-restaurants .nouveau-restaurant .container {
+.restaurants .nouveau-restaurant .container {
   position: relative;
 }
-.liste-restaurants .nouveau-restaurant .container::before {
+.restaurants .nouveau-restaurant .container::before {
   content: "Nouveau";
   color: rgb(29, 128, 74);
   background-color: rgb(145, 227, 182);
@@ -246,7 +251,6 @@ header {
   display: flex;
   width: 30px;
   height: 30px;
-  margin: 30px;
   position: relative;
   cursor: pointer;
 }
@@ -276,6 +280,30 @@ header {
   transition: all 0.4s;
 }
 
+@media screen and (min-width: 750px) {
+  .restaurants .liste-restaurants {
+    flex-direction: row;
+    flex-wrap: wrap;
+    -moz-column-gap: 3%;
+         column-gap: 3%;
+    justify-content: center;
+  }
+  .restaurants .liste-restaurants a {
+    width: 48%;
+  }
+}
+@media screen and (min-width: 1050px) {
+  .restaurants .liste-restaurants {
+    flex-direction: row;
+    flex-wrap: wrap;
+    -moz-column-gap: 3%;
+         column-gap: 3%;
+    justify-content: center;
+  }
+  .restaurants .liste-restaurants a {
+    width: 22%;
+  }
+}
 footer {
   display: flex;
   flex-direction: column;
