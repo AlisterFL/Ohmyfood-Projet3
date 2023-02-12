@@ -81,6 +81,10 @@ header {
   padding: 16px;
 }
 
+.banner {
+  width: 100%;
+}
+
 .location {
   display: flex;
   justify-content: center;
@@ -314,6 +318,8 @@ footer {
   row-gap: 10px;
   background-color: #353535;
   color: white;
+  opacity: 0;
+  animation: animation-fade-in-up 1s 5s ease-out forwards;
 }
 footer svg {
   width: 90px;

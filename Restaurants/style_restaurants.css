@@ -145,9 +145,17 @@ form h2::after {
   color: white;
 }
 
-@media screen and (min-width: 1050px) {
-  form {
+@media screen and (min-width: 1200px) {
+  .menu form {
+    display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    -moz-column-gap: 3%;
+         column-gap: 3%;
+  }
+  .menu form .categorie-menu {
+    width: 30%;
   }
 }
 /* Animation arrivée sur le site */

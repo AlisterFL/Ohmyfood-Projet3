@@ -198,14 +198,21 @@ form{
 
 }
 
-@media screen and (min-width:1050px){
-    form{
-        flex-direction: row;
-        
+@media screen and (min-width:1200px){
+    .menu{
+        form{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            column-gap: 3%;
 
-
+            .categorie-menu{
+                width: 30%;
+            }
+        }
     }
-    
+
 }
 
 /* Animation arrivée sur le site */
